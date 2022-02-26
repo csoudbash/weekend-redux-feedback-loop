@@ -17,36 +17,35 @@ import AdminPage from '../AdminPage/AdminPage';
 
 function App() {
 
-
   return (
-  <>
+    <>
 
-      <Router>
-        <div className='App'>
-        <Header/>
-          
-          <Route path="/" exact>
-            <Feeling />
-          </Route> 
-          <Route path="/understanding">
-            <Understanding />
-          </Route>
-          <Route path="/support">
-            <Supported />
-          </Route>
-          <Route path="/comments">
-            <Comments />
-          </Route>
-          <Route path="/review">
-            <ReviewPage />
-          </Route> 
-          <Route path="/admin">
-            <AdminPage />
-          </Route> 
-        </div>
-      </Router>
+        <Router>
+          <div className='App'>
+          <Header/>
+            
+            <Route path="/" exact>
+              <Feeling />
+            </Route> 
+            <Route path="/understanding">
+              <Understanding />
+            </Route>
+            <Route path="/support">
+              <Supported />
+            </Route>
+            <Route path="/comments">
+              <Comments />
+            </Route>
+            <Route path="/review">
+              <ReviewPage />
+            </Route> 
+            <Route path="/admin">
+              <AdminPage />
+            </Route> 
+          </div>
+        </Router>
 
-  </>  
+    </>  
   );
 }
 
