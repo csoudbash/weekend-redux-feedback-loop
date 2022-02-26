@@ -3,43 +3,48 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route} from 'react-router-dom';
 
+
+// components
+import Header from '../Header/Header';
+
+//routes to pages
+import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
+import Supported from '../Supported/Supported';
+import Comments from '../Comments/Comments';
+import ReviewPage from '../ReviewPage/ReviewPage';
+import AdminPage from '../AdminPage/AdminPage';
+
 function App() {
 
+
   return (
-<>
-
-
-<div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-    </div>
+  <>
 
       <Router>
         <div className='App'>
         <Header/>
-
-          <img src='images/pizza_photo.png' />
-          <p>Pizza is great.</p>
-          {/* <Route path="/" exact>
-            <Home />
-          </Route>  */}
-          <Route path="/pizza-options">
-            <PizzaOptions />
+          
+          <Route path="/" exact>
+            <Feeling />
+          </Route> 
+          <Route path="/understanding">
+            <Understanding />
           </Route>
-          <Route path="/customer-info">
-            <CustomerInfo />
+          <Route path="/support">
+            <Supported />
           </Route>
-          <Route path="/checkout">
-            <Checkout />
+          <Route path="/comments">
+            <Comments />
           </Route>
-          <Route path="/administrator">
-            <Administrator />
-          </Route>
+          <Route path="/review">
+            <ReviewPage />
+          </Route> 
+          <Route path="/admin">
+            <AdminPage />
+          </Route> 
         </div>
       </Router>
-
 
   </>  
   );

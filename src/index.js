@@ -9,7 +9,7 @@ import { createStore, combineReducers, applyMiddleware} from 'redux';
 
 
 // REDUCERS!!! 
-const 
+
 
 // END REDUCERS
 
