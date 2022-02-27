@@ -3,48 +3,59 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
-import { createStore, combineReducers, applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
 // REDUCERS!!! 
 const feedback = (state = {
-feeling: 3,
-understanding: 3,
-support: 3,
-comments: '',
+    feeling: 3,
+    understanding: 3,
+    support: 3,
+    comments: '',
 },
-action) => {
-    
-    if(action.type === 'ADD_FEELING'){
+    action) => {
+
+    if (action.type === 'ADD_FEELING') {
         // const { feeling } = action.payload 
-        return{
+        return {
             ...state,
             feeling: action.payload
         }
     }
-    if(action.type === 'ADD_UNDERSTANDING'){
+    if (action.type === 'ADD_UNDERSTANDING') {
         // const { understanding } = action.payload 
-        return{
+        return {
             ...state,
-            understanding: action.payload 
+            understanding: action.payload
         }
     }
-    if(action.type === 'ADD_SUPPORT'){
+    if (action.type === 'ADD_SUPPORT') {
         // const { support } = action.payload 
-        return{
+        return {
             ...state,
-            support: action.payload 
+            support: action.payload
         }
     }
-    if(action.type === 'ADD_COMMENTS'){
+    if (action.type === 'ADD_COMMENTS') {
         // const { comments } = action.payload 
-        return{
+        return {
             ...state,
-            comments: action.payload 
+            comments: action.payload
         }
     }
+    if (action.type === 'DELETE_VALUES') {
+        // const { comments } = action.payload 
+        return {
+            feeling: '',
+            understanding: '',
+            support: '',
+            comments: '',
+        }
+    }
+
+
     return state;
 }
 
@@ -54,7 +65,7 @@ action) => {
 const storeInstance = createStore(
     combineReducers(
         {
-        feedback
+            feedback
         }
     ),
     applyMiddleware(
@@ -65,8 +76,8 @@ const storeInstance = createStore(
 // END STORE
 
 ReactDOM.render(
-<Provider store= {storeInstance}>
-    <App />
-</Provider>
-, document.getElementById('root'));
+    <Provider store={storeInstance}>
+        <App />
+    </Provider>
+    , document.getElementById('root'));
 registerServiceWorker();

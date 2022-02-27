@@ -1,18 +1,22 @@
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
 
 function ReviewPage() {
 
     const history = useHistory();
     const feedback = useSelector(store => store.feedback)
-    console.log(feedback);
+    const dispatch = useDispatch();
 
     const handleSubmit = () => {
         axios.post('/feedback', feedback)
         .then((response) => {
             console.log('post is now done', response);
+
+            dispatch({
+                type: 'DELETE_VALUES',
+            })
+
         }).catch((error) => {
             console.log('rut ro scoob', error);
         })
