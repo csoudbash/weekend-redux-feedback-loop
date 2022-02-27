@@ -4,7 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route} from 'react-router-dom';
 
 
-// components
+
 import Header from '../Header/Header';
 
 //routes to pages
@@ -20,10 +20,10 @@ function App() {
 
   return (
     <>
-
+        
         <Router>
           <div className='App'>
-          <Header/>
+          <Header/> 
             
             <Route path="/" exact>
               <Feeling />

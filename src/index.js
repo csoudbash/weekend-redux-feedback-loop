@@ -18,35 +18,30 @@ const feedback = (state = {
     action) => {
 
     if (action.type === 'ADD_FEELING') {
-        // const { feeling } = action.payload 
         return {
             ...state,
             feeling: action.payload
         }
     }
     if (action.type === 'ADD_UNDERSTANDING') {
-        // const { understanding } = action.payload 
         return {
             ...state,
             understanding: action.payload
         }
     }
     if (action.type === 'ADD_SUPPORT') {
-        // const { support } = action.payload 
         return {
             ...state,
             support: action.payload
         }
     }
     if (action.type === 'ADD_COMMENTS') {
-        // const { comments } = action.payload 
         return {
             ...state,
             comments: action.payload
         }
     }
     if (action.type === 'DELETE_VALUES') {
-        // const { comments } = action.payload 
         return {
             feeling: '',
             understanding: '',

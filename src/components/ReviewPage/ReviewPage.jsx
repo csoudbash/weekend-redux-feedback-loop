@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ReviewPage() {
 
-    const history = useHistory();
+    const history = useHistory(); // allowing us to use useHistory() so we can navigate between pages
     const feedback = useSelector(store => store.feedback)
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); // allowing the usage of useDispatch() so we can send data to the reducers in index.js
 
     const handleSubmit = () => {
         axios.post('/feedback', feedback)
