@@ -37,12 +37,12 @@ function App() {
             <Route path="/comments">
               <Comments />
             </Route>
-            <Route path="/thanks">
-              <ThanksPage />
-            </Route>
             <Route path="/review">
               <ReviewPage />
             </Route> 
+            <Route path="/thanks">
+              <ThanksPage />
+            </Route>
             <Route path="/admin">
               <AdminPage />
             </Route> 

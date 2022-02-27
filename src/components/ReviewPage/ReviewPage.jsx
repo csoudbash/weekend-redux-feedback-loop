@@ -10,13 +10,14 @@ function ReviewPage() {
     console.log(feedback);
 
     const handleSubmit = () => {
-        axios('/feedback', feedback)
+        axios.post('/feedback', feedback)
         .then((response) => {
             console.log('post is now done', response);
         }).catch((error) => {
             console.log('rut ro scoob', error);
         })
-        history.push('/');
+
+        history.push('/thanks');
     }
 
     // for the comments, maybe have it conditionally render based on whether or not comments were given :)

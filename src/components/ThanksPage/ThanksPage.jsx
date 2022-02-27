@@ -6,13 +6,13 @@ function ThanksPage() {
     const history = useHistory();
 
     const handleNext = () => { 
-        history.push("/review");
+        history.push("/");
     }
 
     return(
         <>
         <h4>Thanks</h4>
-        <button onClick={handleNext}>You're Welcome</button>
+        <button onClick={handleNext}>Do Another?</button>
         </>
     )
 }

@@ -15,7 +15,7 @@ function Comments() {
         })
 
         setComment('');
-        history.push("/thanks");
+        history.push("/review");
     }
 
     return(
