@@ -21,7 +21,7 @@ function Supported() {
     
     return(
         <>
-            <h2>How are you feeling?</h2>
+            <h2>How Supported are you feeling?</h2>
             <input 
             className="input"
             type="number"

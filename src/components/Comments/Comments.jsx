@@ -8,6 +8,7 @@ function Comments() {
     const dispatch = useDispatch();
 
     const [comment, setComment] = useState('');
+    
     const handleNext = () => {
         dispatch({
             type: 'ADD_COMMENTS',
@@ -20,7 +21,7 @@ function Comments() {
 
     return(
     <>
-        <h2>How are you feeling?</h2>
+        <h2>Any Comments?</h2>
         <input 
         className="input-comment"
         type="text"
