@@ -14,6 +14,7 @@ import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import AdminPage from '../AdminPage/AdminPage';
+import ThanksPage from '../ThanksPage/ThanksPage';
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/comments">
               <Comments />
+            </Route>
+            <Route path="/thanks">
+              <ThanksPage />
             </Route>
             <Route path="/review">
               <ReviewPage />
